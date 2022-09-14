@@ -94,6 +94,10 @@ class SimpleForm extends Component {
             {
               id: 'option',
               message: 'What do you want to send ?',
+              trigger: 'options'
+            },
+            {
+              id:'options',
               options: [
                 { value: 'querry', label: 'Querry', trigger: 'q-querry' },
                 { value: 'ask-fedback', label: 'Feedback', trigger: 'ask-feedback' },
@@ -122,6 +126,10 @@ class SimpleForm extends Component {
             {
               id: 'q-submit',
               message: 'Do you wish to submit?',
+              trigger: 'submit_option'
+            },
+            {
+              id:'submit_option',
               options: [
                 { value: 'y', label: 'Yes', trigger: 'end-message' },
                 { value: 'n', label: 'No', trigger: 'no-submit' },
@@ -130,6 +138,10 @@ class SimpleForm extends Component {
             {
               id: 'no-submit',
               message: 'Your information was not submitted.',
+              trigger: 'no-submit_option'
+            },
+            {
+              id: 'no-submit_option',
               options: [
                 { value: 'try', label: 'Try again', trigger: 'option' },
                 { value: 'exit', label: 'exit', trigger: 'exitbot' },
